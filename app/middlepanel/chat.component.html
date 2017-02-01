@@ -1,0 +1,17 @@
+<ul class="media-list" style="margin-top:15px;">
+   <li class="media usrinput"  *ngFor="let message of chatMessages">
+      <div class="media-body">
+         <div class="media">
+            <a class="pull-left" href="#"> 
+            <img class="media-object img-circle " src="https://app.teamsupport.com/dc/1078/UserAvatar/1839999/48/1470773165634"> 
+            </a>
+            <div class="media-body">
+               <span><small><b>{{message.senderName}}</b></small> 
+               </span><span class="text-muted"><small>| 30th Jan at 9:00am</small></span><br>
+               <p>{{message.msgText}}</p>
+               <div class="btn-group btn-corner chat-option" style="display: none;"> <a type="button" class="btn btn-primary btn-xs"><span class="fa fa-smile-o"></span></a> <a type="button" class="btn btn-red btn-xs"><span class="fa fa-share"></span></a> <a type="button" class="btn btn-red btn-xs"><span class="fa fa-ellipsis-v"></span></a> </div>
+            </div>
+         </div>
+      </div>
+   </li>
+</ul>

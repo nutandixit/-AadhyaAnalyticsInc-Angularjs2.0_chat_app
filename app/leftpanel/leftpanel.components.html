@@ -1,0 +1,158 @@
+<div class="page-chatapi  showit leftPanel">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle leftDD" data-toggle="dropdown"> Aadhya Analytics <span class="caret"></span> </button>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+		<div class="uprofile_wall_posts">
+		<div class="comment row mrgTopzero">
+                  <div class="pic-wrapper col-xs-4  text-center"> <img data-src-retina="../data/profile/avatar-3.png" data-src="../data/profile/avatar-3.png" src="../data/profile/avatar-3.png" alt=""> </div>				  
+                  <div class="info-wrapper col-xs-8">
+                    <div class="username"> 
+					<span class="bold"><h5 class="mrgBtnzero">Emma Watson</h5></span> 
+					</div>
+                    <div class="info text-muted mrgTopzero info-details mrgBtnzero"> 
+					<p class="mrgBtmzero mrgBtnzero"><small>@emmawatson</small>
+					</p></div>
+                  </div>
+                </div></div>
+		
+		</li>
+		<li><a href="#"> Profile</a></li>
+		<li><a href="#"> Preferences</a></li>
+        <li class="divider"></li>
+		
+		<li>
+		<div class="uprofile_wall_posts">
+		<div class="comment row mrgTopzero">
+                  <div class="pic-wrapper col-xs-4  text-center"> <img data-src-retina="../data/profile/avatar-3.png" data-src="../data/profile/avatar-3.png" src="../data/profile/avatar-3.png" alt=""> </div>				  
+                  <div class="info-wrapper col-xs-8">
+                    <div class="username"> 
+					<span class="bold"><h5 class="mrgBtnzero">Emma Watson</h5></span> 
+					</div>
+                    <div class="info text-muted mrgTopzero info-details mrgBtnzero"> 
+					<p class="mrgBtnzero"><small>@emmawatson</small>
+					</p></div>
+                  </div>
+                </div></div>
+		
+		</li>
+		
+        <li><a href="#">Signout from AAIL</a></li>
+		
+		
+      </ul>
+    </div>
+    <div class="chat-wrapper ps-container ps-active-y" style="height: 662px;">
+      <h4 class="group-head">Groups <a class="fa fa-plus pull-right" data-toggle="modal" href="#GroupsMessages"></a></h4>
+      <ul class="group-list list-unstyled">
+        <li class="group-row">
+          <div class="group-status available"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Work</a></h4>
+          </div>
+        </li>
+        <li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Friends</a></h4>
+          </div>
+        </li>
+      </ul>
+      <h4 class="group-head">Direct Messages <a (click)="addUsers('maharaj')" class="fa fa-plus pull-right" data-toggle="modal" href="#DirectMessages"></a> </h4>
+      <ul class="group-list list-unstyled">
+        <li class="group-row" *ngFor="let user of userList">
+          <div class="group-status" [ngClass]="{'available': user.isAvailable, 'away':!user.isAvailable}"> 
+          <i class="fa fa-circle"></i> 
+          </div>
+          <div class="group-info">
+            <h4><a href="#">{{user.name}}</a></h4>
+          </div>
+        </li>
+      <!--   <li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Vijay Y</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li>
+		<li class="group-row">
+          <div class="group-status away"> <i class="fa fa-circle"></i> </div>
+          <div class="group-info">
+            <h4><a href="#">Venkat A</a></h4>
+          </div>
+        </li> -->
+
+      </ul> 
+    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 662px; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 564px;"></div></div></div>
+  </div>
